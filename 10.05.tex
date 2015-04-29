@@ -1,2 +1,22 @@
 
 { \bf 10.05 }
+ Let $X_1, ..., X_n$ be a random sample from a gamma distribution, $X_i \sim GAM(\theta,2)$. Show that S = $\sum X_i $ is sufficient for $\theta$.\\
+ (a) by using equation (10.2.1),\\
+ %$f(x) = \frac{1}{\theta^2 \Gamma (2)}x\exp(\frac{-x}{\theta})$\\
+ $f(x_1,...,x_n;\theta)=\frac{1}{\theta^{2n}} \displaystyle \prod_{i=1}^n x_i \exp(\frac{ \sum -x_i}{\theta}) [1 (x_i > 0, \theta > 0)]$\\
+ $S \sim GAM(\theta, 2n)$ and so $f_S(s;\theta)=\frac{1}{\theta^{2n} \Gamma (2n)} s^{2n-1}\exp(\frac{-s}{\theta})[1 (s>0, \theta >0)]$.\\
+ Then if $s = \sum x_i$, 
+ \begin{equation}
+ 	\frac{f(x_1,...,x_n;\theta)}{f_S(s:\theta)}=\frac{\frac{1}{\theta^{2n}} \displaystyle \prod_{i=1}^n x_i \exp(\frac{-s}{\theta})}{\frac{1}{\theta^{2n} \Gamma (2n)} s^{2n-1}\exp(\frac{-s}{\theta})} = \frac{\Gamma(2n) \displaystyle \prod_{i=1}^n x_i }{s^{2n-1}} [1(x_i >0, s>0)],
+	\end{equation}
+	 which is free of $\theta$ and thus by equation (10.2.1) S is sufficient for $\theta$.\\
+	 \\
+(b) by the factorization criterion of equation (10.2.3)\\
+\begin{equation}
+f(x_1,...,x_n;\theta)=\frac{1}{\theta^{2n}} \displaystyle \prod_{i=1}^n x_i \exp(\frac{ \sum -x_i}{\theta}) [1 (x_i > 0, \theta > 0)]
+\end{equation}
+If $s=\sum x_i$,
+\begin{equation}
+f(x_1,...,x_n;\theta)=\frac{\exp(\frac{-s}{\theta})}{\theta^{2n}} \displaystyle \prod_{i=1}^n x_i [1 (x_i > 0, \theta > 0)]\\
+\end{equation}
+ where $g(s;\theta) = \frac{\exp(\frac{-s}{\theta})}{\theta^{2n}}$ does not depend on $x_1,...,x_n$ and $h(x_1,...,x_n)=\displaystyle \prod_{i=1}^n x_i$ does not depend on $\theta$.  Then by (10.2.3) $S=\sum X_i$ is sufficient for $\theta$.
