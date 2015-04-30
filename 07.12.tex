@@ -11,4 +11,24 @@ We now solve for $n$ from the above equation knowing that the desired probabilit
 \end{align*}
 So n, since it must be an integer, is rounded to 90.
 \\
-b) \\
+b) Solve using Normal Approximation
+$\mu = .05n$ and $\sigma = \sqrt{n*.05*(1-.05)}$
+\Pr \left( X \geq 1 \right) & = 0.99
+\begin{equation*}
+\begin{split}
+	\Pr\left( X geq 1\right)  & = \Pr\left(\frac{Z - .05n}{\sqrt{n*.05*(1-.05)}  geq \frac{1-0.5-.05n}{ \sqrt{n*.05*(1-.05)}}\right) \\
+		& =\Pr\left(Z geq -2.33) = 0.99\\
+ 		&  \Pr\left(Z geq \frac{0.5-.05n}{ \sqrt{.0475n}}\right) = 0.99 \\
+		& \frac{0.5-.058n}{\sqrt(.0475n} = -2.33 \\
+		
+\end{split}
+\end{equation*}
+Solving for n yields 122 units.
+\\
+c) Solve using Poisson Approximation
+\begin{align*}
+	\Pr \left( X \geq 1 \right) & = 1 - \Pr \left( X < 1 \right ) \\
+	\frac{\exp(-.05n)(.05n)^0}{0!}
+	\exp(-.05n)=0.01
+	n & = \frac{-\ln.01}{.05} = 
+Solving for n and rounding to the nearest integer yields n = 92
